@@ -22,3 +22,9 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 4. shopping-list.controller.js: implement addItem function signature
 5. npm run test: should pass
 6. package.json: update "test":"jest --watchAll" this will keep monitoring the changes on save, no need re-run test command 
+
+# s4-setup-mongoose
+1. Install MongoDB and Robo 3T. MongoDB Compass is also very useful.
+2. npm install mongoose --save
+3. Create schema /database/models/ShopItem.js
+4. ShopItem.js: define ShopItemSchema and export ShopItemModel 
