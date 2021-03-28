@@ -57,3 +57,4 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 4. use _getJSONData() on res to get the data from the response. At this moment observe the test is failing.
 5. shopping-list.controller.js: modify the addItem method and return savedItem in json format by changing .send() to .json(savedItem)
 6. Observe the test is still failing.
+7. Test is still failing because the memory of expected object and the response object are different. Use toStrictEqual in test instead of toBe to validate the response 

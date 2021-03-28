@@ -33,6 +33,6 @@ describe("ShoppingListController.addItem", () => {
     it("should return json body in response", () => {
         ShopItemModel.create.mockReturnValue(newShopItem);
         ShoppingListController.addItem(req, res, next);
-        expect(res._getJSONData()).toBe(newShopItem);
+        expect(res._getJSONData()).toStrictEqual(newShopItem);
     })
 })
