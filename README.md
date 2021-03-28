@@ -52,3 +52,4 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 
 # s7-test-to-validate-response-has-new-shop-item-and-refactor-using-beforeEach
 1. shopping-list.controller.test.js: extract req, res and next to global beforeEach
+2. extract request.body to beforeEach of describe
