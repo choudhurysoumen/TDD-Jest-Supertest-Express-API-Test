@@ -28,3 +28,11 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 2. npm install mongoose --save
 3. Create schema /database/models/ShopItem.js
 4. ShopItem.js: define ShopItemSchema and export ShopItemModel 
+
+# s5-jest.fn-mock-mongoose-model
+1. shopping-list.controller.test.js: require ShopItemModel
+2. Use jest.fn() to mock mongoose create method
+3. create new test: it "should call ShopItemModel.create" - check console: to confirm the test failed
+4. shopping-list.controller.js: invoke ShopItemModel.create() inside the addItem() - observe test is passing
+5. Observe Mongoose "console.warn", follow the step mentioned in the url to enable node test environement. create jest.config.js in the root folder and add the mentioned content.
+6. re-run the test and confirm the warning is gone
