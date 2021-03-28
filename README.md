@@ -55,3 +55,5 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 2. extract request.body to beforeEach of describe
 3. it "should return json body in response": use mockReturnValue to mock the response whenever the respective method is called.
 4. use _getJSONData() on res to get the data from the response. At this moment observe the test is failing.
+5. shopping-list.controller.js: modify the addItem method and return savedItem in json format by changing .send() to .json(savedItem)
+6. Observe the test is still failing.
