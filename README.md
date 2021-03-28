@@ -14,3 +14,8 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 3. setup jest: npm install jest --save-dev
 4. package.json: update scripts.test with following: "test": "jest"
 5. npm run test - run this command. This will fail as "Your test suite must contain at least one test."
+
+# s3-tdd-approach-to-create-api
+1. shopping-list.controller.test.js: require shopping-list.controller. 
+2. Add "describe" and "it" section. 
+3. npm run test: this will fail as ShoppingListController.addItem function is not implemented
