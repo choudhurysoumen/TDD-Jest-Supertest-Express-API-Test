@@ -1,0 +1,24 @@
+{
+  "name": "TDD-Jest-Supertest-Express-API-Test",
+  "version": "1.0.0",
+  "description": "TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST API.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choudhurysoumen/TDD-Jest-Supertest-Express-API-Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choudhurysoumen/TDD-Jest-Supertest-Express-API-Test/issues"
+  },
+  "homepage": "https://github.com/choudhurysoumen/TDD-Jest-Supertest-Express-API-Test#readme"
+}
