@@ -19,6 +19,6 @@ describe("ShoppingListController.addItem", () => {
         req.body = newShopItem;
 
         ShoppingListController.addItem(req, res, next);
-        expect(ShopItemModel.create).toBeCalled();
+        expect(ShopItemModel.create).toBeCalledWith(newShopItem);
     })
 })

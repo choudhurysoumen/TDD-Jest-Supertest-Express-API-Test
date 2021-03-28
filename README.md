@@ -43,3 +43,5 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 3. Create ./test/mock-data/shop-item.json mock data file and use it in the test.
 4. Modify the test to pass req, res, next in ShoppingListController.addItem(req, res, next) 
 5. Observe the test is failing, modify shopping-list.controller.js to accept req, res, next params
+6. Update .toBeCalled() to alledWith(newShopItem): monitor the test is failing.
+7. shopping-list.controller.js: pass req.body to ShopItemModel.create and test will pass now
