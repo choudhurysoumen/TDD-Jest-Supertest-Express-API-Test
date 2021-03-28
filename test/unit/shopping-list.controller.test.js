@@ -21,4 +21,14 @@ describe("ShoppingListController.addItem", () => {
         ShoppingListController.addItem(req, res, next);
         expect(ShopItemModel.create).toBeCalledWith(newShopItem);
     })
+    it("should return HTTP response 201", () => {
+        let req, res, next;
+        req = httpMocks.createRequest();
+        res = httpMocks.createResponse();
+        next= null;
+        req.body = newShopItem;
+        ShoppingListController.addItem(req, res, next);
+        expect(res.statusCode).toBe(201);
+        expect(res._isEndCalled()).toBeTruthy();
+    })
 })
