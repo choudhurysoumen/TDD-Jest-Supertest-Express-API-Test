@@ -49,3 +49,12 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 9. shopping-list.controller.js: add following - res.status(201) to make the test pass
 10. To ensure response it send back modify the test and expect res._isEndCalled() toBeTruthy: test should fail at this moment.
 11. shopping-list.controller.js: res.status(201).send() append send() - all test should pass at this moment.
+
+# s7-test-to-validate-response-has-new-shop-item-and-refactor-using-beforeEach
+1. shopping-list.controller.test.js: extract req, res and next to global beforeEach
+2. extract request.body to beforeEach of describe
+3. it "should return json body in response": use mockReturnValue to mock the response whenever the respective method is called.
+4. use _getJSONData() on res to get the data from the response. At this moment observe the test is failing.
+5. shopping-list.controller.js: modify the addItem method and return savedItem in json format by changing .send() to .json(savedItem)
+6. Observe the test is still failing.
+7. Test is still failing because the memory of expected object and the response object are different. Use toStrictEqual in test instead of toBe to validate the response 

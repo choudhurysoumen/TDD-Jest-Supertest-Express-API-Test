@@ -1,6 +1,6 @@
 const ShopItemModel = require("../../database/models/ShopItem");
 
 exports.addItem = (req, res, next) => {
-    ShopItemModel.create(req.body);
-    res.status(201).send();
+    const savedItem = ShopItemModel.create(req.body);
+    res.status(201).json(savedItem);
 }
