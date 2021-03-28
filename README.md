@@ -49,3 +49,6 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 9. shopping-list.controller.js: add following - res.status(201) to make the test pass
 10. To ensure response it send back modify the test and expect res._isEndCalled() toBeTruthy: test should fail at this moment.
 11. shopping-list.controller.js: res.status(201).send() append send() - all test should pass at this moment.
+
+# s7-test-to-validate-response-has-new-shop-item-and-refactor-using-beforeEach
+1. shopping-list.controller.test.js: extract req, res and next to global beforeEach
