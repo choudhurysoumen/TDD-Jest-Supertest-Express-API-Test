@@ -36,3 +36,16 @@ TDD approach to write Unit/ Integartion using Jest/ Supertest for Express REST A
 4. shopping-list.controller.js: invoke ShopItemModel.create() inside the addItem() - observe test is passing
 5. Observe Mongoose "console.warn", follow the step mentioned in the url to enable node test environement. create jest.config.js in the root folder and add the mentioned content.
 6. re-run the test and confirm the warning is gone
+
+# s6-setup-node-mocks-http-to-mock-req-res-next
+1. npm install node-mocks-http --save-dev
+2. shopping-list.controller.test.js: setup node-mocks-http and mock req, res
+3. Create ./test/mock-data/shop-item.json mock data file and use it in the test.
+4. Modify the test to pass req, res, next in ShoppingListController.addItem(req, res, next) 
+5. Observe the test is failing, modify shopping-list.controller.js to accept req, res, next params
+6. Update .toBeCalled() to alledWith(newShopItem): monitor the test is failing.
+7. shopping-list.controller.js: pass req.body to ShopItemModel.create and test will pass now
+8. Create a new test to validate HTTP response code 201. it "should return HTTP response 201" test should fail at this time.
+9. shopping-list.controller.js: add following - res.status(201) to make the test pass
+10. To ensure response it send back modify the test and expect res._isEndCalled() toBeTruthy: test should fail at this moment.
+11. shopping-list.controller.js: res.status(201).send() append send() - all test should pass at this moment.
